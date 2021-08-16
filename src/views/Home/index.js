@@ -65,7 +65,7 @@ function Home() {
                                 />
                                 <td>
                                     <Link to={`/task/${t._id}`}>
-                                        <button type="button">Editar produto</button>
+                                        <button type="button" className="btn-edt">Editar produto</button>
                                     </Link>
                                 </td>
                             </tr>

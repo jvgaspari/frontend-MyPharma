@@ -22,17 +22,19 @@ export const RightSide = styled.div`
     height: 80px;
     display: flex;
     align-items: center;
-    padding-left: 16px;
-    justify-content: space-around;
+    justify-content: flex-end;
+    padding-right: 36px;
 
     .btn-adc{
         background-color: #00a5fe;
-        color: white;
+        color: #FFF;
+        font-weight: bold;
         border-radius: 12px;
         text-decoration: none;
         width: 150px;
         height: 40px;
         display: flex;
+        margin: 0 10px;
         justify-content: center;
         align-items: center;
         transition: 0.3s ease-in;

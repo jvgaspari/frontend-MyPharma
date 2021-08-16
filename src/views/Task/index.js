@@ -86,7 +86,7 @@ function Task({match}) {
                     <span>Nome</span>
                     <input 
                         type="text" 
-                        placeholder="título da tarefa"
+                        placeholder="Adicione o nome do produto"
                         onChange={ e => setName(e.target.value) }
                         value = { name }
                     />
@@ -95,7 +95,7 @@ function Task({match}) {
                     <span>Quantidade</span>
                     <input 
                         type="number" 
-                        placeholder="título da tarefa"
+                        placeholder="Adicione a quantidade de itens"
                         onChange={ e => setQuantity(e.target.value) }
                         value = { quantity }
                     />
@@ -104,7 +104,7 @@ function Task({match}) {
                     <span>Preço</span>
                     <input 
                         type="number" 
-                        placeholder="título da tarefa"
+                        placeholder="Adicione o preço do produto"
                         onChange={ e => setPrice(e.target.value) }
                         value = { price }
                     />
@@ -113,7 +113,7 @@ function Task({match}) {
                     <span>Código</span>
                     <input 
                         type="text" 
-                        placeholder="título da tarefa"
+                        placeholder="Adicione o código de barras"
                         onChange={ e => setCode(e.target.value) }
                         value = { code }
                     />
@@ -122,7 +122,7 @@ function Task({match}) {
                     <span>Descrição</span>
                     <textarea 
                         rows={5} 
-                        placeholder="Detalhes da tarefa"
+                        placeholder="Descreva o produto"
                         onChange={ e => setDescription(e.target.value) }
                         value = { description }
                     />
@@ -131,7 +131,7 @@ function Task({match}) {
                 { match.params.id && <button type="button" onClick={Remove}>Excluir</button> }
                 </S.Options>
                 <S.Save>
-                    <button type="button" onClick={Save}>Cadastrar</button>
+                    <button type="button" onClick={Save}>{ match.params.id ? 'Atualizar':'Cadastrar' }</button>
                 </S.Save>
             </S.Form>
             <Footer/>

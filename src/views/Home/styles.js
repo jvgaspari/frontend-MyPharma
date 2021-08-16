@@ -21,4 +21,41 @@ export const Content = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 32px;
+
+    table, th, td {
+        border: none;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 5px 10px;
+        text-align: center;
+        height: 24px;
+    }
+
+    th {
+        background-color: #20295F;
+        color: #FFF;
+    }
+
+    table tr:nth-child(odd){
+        background-color: #DDD;
+    }
+
+    table tr:nth-child(even){
+        background-color: #FFF;
+    }
+
+    .btn-edt {
+        border: none;
+        border-radius: 5px;
+        background-color: #00a5fe;
+        color: #FFF;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 0.7;
+        }
+    }
 `;
