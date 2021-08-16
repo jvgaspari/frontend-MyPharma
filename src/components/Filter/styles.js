@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     background-color: ${props => props.actived ? '#EE6B26' : '#20295F'};
-    width: 240px;
-    height: 60px;
+    width: 140px;
+    height: 30px;
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
 
     img {
@@ -20,8 +20,8 @@ export const Container = styled.div`
     span {
         color: #FFF;
         font-weight: bold;
-        align-self: flex-end;
         font-size: 18px;
+        align-self: flex-end;
     }
 
     &:hover{
