@@ -17,6 +17,25 @@ export const FilterArea = styled.div`
     }
 `;
 
+export const Search = styled.div`
+    display: flex;
+    justify-content: center;
+
+    input {
+        border: none;
+        margin-top: 32px;
+        width: 360px;
+        height: 32px;
+        background-color: #20295F;
+        color: #FFF;
+
+        &::placeholder{
+            color: #FFF;
+            opacity: 0.7;
+        }
+    }
+`;
+
 export const Content = styled.div`
     display: flex;
     justify-content: center;

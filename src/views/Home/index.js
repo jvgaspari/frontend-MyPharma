@@ -13,6 +13,7 @@ function Home() {
 
     const [filterActived, SetFilterActived] = useState("all");
     const[tasks, setTasks] = useState([]);
+    const[searchTerm, setSearchTerm] = useState('');
 
     async function LoadTasks(){
         await api.get(`/task/filter/${filterActived}`)
@@ -39,6 +40,15 @@ function Home() {
                     <Filter title="resetar"/>
                 </button>
             </S.FilterArea>
+            <S.Search>
+            <input
+                type="search"
+                placeholder="Faça uma busca ..."
+                onChange={(e) => {
+                    setSearchTerm(e.target.value)
+                }}
+            />
+            </S.Search>
             <S.Content>
                 <form>
                     <table>
@@ -54,7 +64,16 @@ function Home() {
                         </thead>
                         <tbody>
                         {
-                        tasks.map(t => (
+                        tasks.filter((val) => {
+                            if(searchTerm === ''){
+                                return val;
+                            }else if(
+                                val.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                val.description.toLowerCase().includes(searchTerm.toLowerCase())
+                            ){
+                                return val;
+                            }
+                        }).map(t => (
                             <tr>
                                 <TaskCard 
                                     name={t.name} 
